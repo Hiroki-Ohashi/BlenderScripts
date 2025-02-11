@@ -10,8 +10,10 @@ from .file import MYADDON_OT_add_filename
 from .file import OBJECT_PT_file_name
 from .scene import MYADDON_OT_export_scene
 from .my_menu import TOPBAR_MT_my_menu
-from .disabled import MYADDON_OT_disabled
+from .disabled import MYADDON_OT_add_disabled
 from .disabled import OBJECT_PT_disabled
+from .spawn import MYADDON_OT_spawn_point_symbol
+from .spawn import MYADDON_OT_create_spawn_point_symbol
 
 # ブレンダーに登録するアドオン情報
 bl_info = {
@@ -34,11 +36,13 @@ classes = (
     MYADDON_OT_export_scene,
     MYADDON_OT_add_filename,
     MYADDON_OT_add_collider,
-    MYADDON_OT_disabled,
+    MYADDON_OT_add_disabled,
     TOPBAR_MT_my_menu,
     OBJECT_PT_file_name,
     OBJECT_PT_collider,
     OBJECT_PT_disabled,
+    MYADDON_OT_spawn_point_symbol,
+    MYADDON_OT_create_spawn_point_symbol,
 )
 
 # アドオン有効化時コールバック
