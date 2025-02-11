@@ -14,6 +14,8 @@ from .disabled import MYADDON_OT_add_disabled
 from .disabled import OBJECT_PT_disabled
 from .spawn import MYADDON_OT_spawn_point_symbol
 from .spawn import MYADDON_OT_create_spawn_point_symbol
+from .spawn import MYADDON_OT_create_player_spawn_point_symbol
+from .spawn import MYADDON_OT_create_enemy_spawn_point_symbol
 
 # ブレンダーに登録するアドオン情報
 bl_info = {
@@ -43,6 +45,8 @@ classes = (
     OBJECT_PT_disabled,
     MYADDON_OT_spawn_point_symbol,
     MYADDON_OT_create_spawn_point_symbol,
+    MYADDON_OT_create_player_spawn_point_symbol,
+    MYADDON_OT_create_enemy_spawn_point_symbol,
 )
 
 # アドオン有効化時コールバック
