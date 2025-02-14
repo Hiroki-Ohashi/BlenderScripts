@@ -80,19 +80,19 @@ class MYADDON_OT_create_spawn_point_symbol(bpy.types.Operator):
             # 再検索。今度は見つかるはず
             spawn_object = bpy.data.objects.get(SpawnNames.names[self.type][SpawnNames.PROTOTYPE])
 
-            print("出現ポイントのシンボルを作成します")
-
-            # Blenderでの選択を解除する
-            bpy.ops.object.select_all(action='DESELECT')
-            # 複製元の非表示オブジェクトを複製する
-            object = spawn_object.copy()
-            # 複製したオブジェクトを現在のシーンにリンク
-            bpy.context.collection.objects.link(object)
-            # オブジェクト名を変更
-            object.name = SpawnNames.names[self.type][SpawnNames.INSTANCE]
-
             return {'FINISHED'}
         
+        print("出現ポイントのシンボルを作成します")
+
+        # Blenderでの選択を解除する
+        bpy.ops.object.select_all(action='DESELECT')
+        # 複製元の非表示オブジェクトを複製する
+        object = spawn_object.copy()
+        # 複製したオブジェクトを現在のシーンにリンク
+        bpy.context.collection.objects.link(object)
+        # オブジェクト名を変更
+        object.name = SpawnNames.names[self.type][SpawnNames.INSTANCE]
+
         return {'FINISHED'}
         
 class MYADDON_OT_create_player_spawn_point_symbol(bpy.types.Operator):
